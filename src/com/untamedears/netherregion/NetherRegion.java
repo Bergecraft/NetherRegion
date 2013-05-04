@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class NetherRegion  extends JavaPlugin implements Listener {
 
-	private static final Logger LOG = Logger.getLogger("RealisticBiomes");
+	private static final Logger LOG = Logger.getLogger("NetherRegion");
 
 	@Override
 	public void onEnable() {
