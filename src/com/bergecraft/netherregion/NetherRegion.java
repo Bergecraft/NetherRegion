@@ -72,13 +72,13 @@ public class NetherRegion  extends JavaPlugin implements Listener {
 			loc.setX(loc.getX() / mScaleFactor);
 			loc.setZ(loc.getZ() / mScaleFactor);
 		} else {
-			LOG.info("Unexpected portal event to " + dest.getEnvironment().toString() + " from " + e.getFrom().toString());
 			return;
 		}
 		
 		loc.setWorld(dest);
 		Location newLoc = e.getPortalTravelAgent().findOrCreate(loc);
 		e.setTo(newLoc);
+		LOG.fine(new StringBuilder("Player ").append(e.getPlayer().getName()).append(" portal event from ").append(e.getFrom()).append(" to ").append(newLoc).toString());
 	}
 
 	@EventHandler(ignoreCancelled = true)
@@ -95,13 +95,13 @@ public class NetherRegion  extends JavaPlugin implements Listener {
 			loc.setX(loc.getX() / mScaleFactor);
 			loc.setZ(loc.getZ() / mScaleFactor);
 		} else {
-			LOG.info("Unexpected portal event to " + dest.getEnvironment().toString() + " from " + e.getFrom().toString());
 			return;
 		}
 		
 		loc.setWorld(dest);
 		Location newLoc = e.getPortalTravelAgent().findOrCreate(loc);
 		e.setTo(newLoc);
+		LOG.fine(new StringBuilder("Entity ").append(e.getEntity()).append(" portal event from ").append(e.getFrom()).append(" to ").append(newLoc).toString());
 	}
 	
 }
