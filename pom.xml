@@ -3,28 +3,21 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.untamedears</groupId>
+  <groupId>com.bergecraft</groupId>
   <artifactId>NetherRegion</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>NetherRegion</name>
-  <url>https://github.com/WildWeazel/NetherRegion</url>
+  <url>https://github.com/Bergecraft/NetherRegion</url>
   
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
-          <configuration>
-            <source>1.7</source>
-            <target>1.7</target>
-            <compilerArgument></compilerArgument>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-        
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
+  <build>        
     <sourceDirectory>${basedir}/src</sourceDirectory>
     
     <resources>
@@ -41,7 +34,7 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
-      <version>1.7.9-R0.2</version>
+      <version>1.7.10-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
